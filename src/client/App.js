@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import './App.css';
@@ -17,7 +17,11 @@ function App() {
                 <Route
                   key={id}
                   path={path}
-                  element={<Component />}
+                  element={(
+                    <Suspense fallback={<div>Loading ...</div>}>
+                      <Component />
+                    </Suspense>
+                  )}
                 />
               ),
             )}

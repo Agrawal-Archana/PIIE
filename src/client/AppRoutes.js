@@ -1,8 +1,12 @@
+import { lazy } from 'react';
 import URL from './utils/constants/URL';
-import Home from './pages/home';
-import Login from './pages/login';
-import Dashboard from './pages/dashboard';
-import Signup from './pages/signup';
+
+const Home = lazy(() => import('./pages/home'));
+const Login = lazy(() => import('./pages/login'));
+const Dashboard = lazy(() => import('./pages/dashboard'));
+const Signup = lazy(() => import('./pages/signup'));
+const ForgotPassword = lazy(() => import('./pages/forgot-password'));
+const PageNotFound = lazy(() => import('./pages/page-not-found'));
 
 export default [
   {
@@ -32,5 +36,19 @@ export default [
     component: Signup,
     isProtected: false,
     index: false,
+  },
+  {
+    id: 'forgot-password',
+    path: URL.FORGOT_PASSWORD,
+    component: ForgotPassword,
+    isProtected: false,
+    index: false,
+  },
+  {
+    id: 'route_wildcard',
+    path: '/*',
+    index: false,
+    label: 'Wildcard',
+    component: PageNotFound,
   },
 ];

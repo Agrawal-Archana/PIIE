@@ -74,7 +74,7 @@ function Login() {
             label="__FORGOT_PASSWORD"
             variant={ButtonVariants.LINK}
             size={ButtonSizes.SMALL}
-            onClick={() => navigate(URL.FORGET_PASSWORD)}
+            onClick={() => navigate(URL.FORGOT_PASSWORD)}
             className="no-padding"
           />
         </div>
