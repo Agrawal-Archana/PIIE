@@ -1,0 +1,63 @@
+@import '../../styleguide/color-palette.scss';
+@import '../../styleguide/font-size.scss';
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+
+  input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: $white;
+    width: 16px;
+    height: 16px;
+    border: 1px solid $gray-300;
+    border-radius: 4px;
+    outline: none;
+    display: grid;
+    place-content: center;
+    margin-right: 5px;
+
+    &::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 4px #f4ebff;
+      border: 1px solid #D6BBFB;
+    }
+
+    &:hover {
+      background-color: $primary-100;
+      border: 1px solid $primary-600;
+    }
+
+    &:disabled {
+      color: $gray-100;
+      cursor: not-allowed;
+    }
+
+    &:checked {
+      border: 1px solid $primary-600;
+
+      &::before {
+        background-color: $primary-600;
+        border: 1px solid $primary-600;
+        clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+      }
+
+      &:focus {
+        box-shadow: 0 0 0 4px #f4ebff;
+        border: 1px solid $primary-600;
+      }
+    }
+  }
+
+  .checkbox-label {
+    font-weight: 500;
+    font-size: $font-size-2;
+    color: $gray-700;
+  }
+}
