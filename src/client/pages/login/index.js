@@ -1,6 +1,6 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 import { Button, ButtonVariants, ButtonSizes } from '../../components/button';
 import Icon from '../../components/icon';
@@ -16,14 +16,13 @@ import './index.scss';
 function Login() {
   const [getTranslations] = useTranslation();
   const navigate = useNavigate();
-  const location = useLocation();
 
   const {
     register, handleSubmit, watch, formState: { errors },
   } = useForm({ mode: 'all' });
 
   const onSubmitClick = () => {
-    navigate(`/dashboard${location.search}`);
+    navigate(URL.DASHBOARD);
   };
 
   return (
@@ -40,7 +39,7 @@ function Login() {
           defaultValue=""
           register={register}
           prefixIcon={
-            <Icon type={IconTypes.MAIL} size={IconSizes.MEDIUM} color={IconColors.GRAY_500} />
+            <Icon type={IconTypes.MAIL} size={IconSizes.MEDIUM} color={IconColors.GREY} />
           }
           errorMessage={errors?.email && validate(errors.email, '')}
           rules={{ [ValidationTypes.REQUIRED]: true }}

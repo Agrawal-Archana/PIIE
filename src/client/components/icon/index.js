@@ -1,19 +1,23 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
+import clsx from 'clsx';
 
 import { IconSizes, IconsMap, IconTypes } from './icons-constants';
+
+import './index.scss';
 
 const Icon = forwardRef((props, ref) => {
   const {
     color, size, strokeWidth, type, onClick,
   } = props;
   const IconComponent = IconsMap[IconTypes[type]];
+  const classNames = clsx('icon-container', color);
 
   return (
     <IconComponent
       ref={ref}
-      stroke={color}
       size={size}
+      className={classNames}
       strokeWidth={strokeWidth}
       onClick={onClick}
     />

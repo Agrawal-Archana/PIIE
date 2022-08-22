@@ -49,7 +49,7 @@ function Input({
               <Icon
                 type={IconTypes.ALERT_CIRCLE}
                 size={IconSizes.MEDIUM}
-                color={IconColors.ERROR_500}
+                color={IconColors.ERROR}
               />
             </div>
           )

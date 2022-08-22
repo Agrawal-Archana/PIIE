@@ -1,5 +1,6 @@
 import {
-  Image, AlertCircle, HelpCircle, Mail,
+  Image, AlertCircle, HelpCircle, Mail, BarChart, Home, Layers, Users, Settings,
+  Activity, ChevronDown, ChevronRight, LifeBuoy, Star, CloudRain, Bell,
 } from 'react-feather';
 
 const IconsMap = {
@@ -7,6 +8,18 @@ const IconsMap = {
   ALERT_CIRCLE: AlertCircle,
   HELP_CIRCLE: HelpCircle,
   MAIL: Mail,
+  BAR_CHART: BarChart,
+  HOME: Home,
+  LAYERS: Layers,
+  USERS: Users,
+  SETTINGS: Settings,
+  ACTIVITY: Activity,
+  CHEVRON_DOWN: ChevronDown,
+  CHEVRON_RIGHT: ChevronRight,
+  LIFEBUOY: LifeBuoy,
+  STAR: Star,
+  CLOUD_RAIN: CloudRain,
+  NOTIFICATIONS: Bell,
 };
 
 const IconTypes = Object.keys(IconsMap).reduce((acc, key) => ({ ...acc, [key]: key }), {});
@@ -20,8 +33,15 @@ const IconSizes = {
 };
 
 const IconColors = {
-  GRAY_500: '#667085',
-  ERROR_500: '#f04438',
+  LIGHT: 'color-white',
+  DARK: 'color-dark',
+  GREY: 'color-grey',
+  LIGHT_GREY: 'color-light-grey',
+  PRIMARY: 'color-primary',
+  DISABLED: 'color-disabled',
+  SUCCESS: 'color-success',
+  WARNING: 'color-warning',
+  ERROR: 'color-error',
 };
 
 export {

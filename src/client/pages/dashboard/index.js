@@ -1,24 +1,23 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
 
-import { Button, ButtonSizes, ButtonVariants } from '../../components/button';
-import URL from '../../utils/constants/URL';
+import Sidebar from '../../components/navigation/side-bar';
+import { NavigationList } from '../../utils/helpers/dashboard-helper';
 
 import './index.scss';
 
 function Dashboard() {
+  const [selectedItem, setSelectedItem] = useState(NavigationList[0].id);
+
   return (
     <div className="dashboard-page">
-      Welcome to Dashboard !!
-
-      <Link to={URL.HOME}>
-        <Button
-          id="logout"
-          label="__LOG_OUT"
-          variant={ButtonVariants.PRIMARY}
-          size={ButtonSizes.LARGE}
-        />
-      </Link>
+      <Sidebar
+        header="Untitled UI"
+        selectedItem={selectedItem}
+        setSelectedItem={setSelectedItem}
+      />
+      <div className="page-content">
+        {`Page contents will be coming soon for ${selectedItem}`}
+      </div>
     </div>
   );
 }

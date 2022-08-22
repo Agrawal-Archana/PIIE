@@ -1,14 +1,15 @@
+@import '../../styleguide/font-size.scss';
+@import '../../styleguide/color-palette.scss';
+
 .dashboard-page {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 10px;
   width: 100%;
   height: 100%;
+  display: flex;
 
-  .routes {
-    display: flex;
-    gap: 5px;
-  }
+    .page-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 1;
+    }
 }

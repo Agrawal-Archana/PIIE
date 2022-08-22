@@ -38,7 +38,7 @@ function ForgotPassword() {
           defaultValue=""
           register={register}
           prefixIcon={
-            <Icon type={IconTypes.MAIL} size={IconSizes.MEDIUM} color={IconColors.GRAY_500} />
+            <Icon type={IconTypes.MAIL} size={IconSizes.MEDIUM} color={IconColors.GREY} />
                     }
           errorMessage={errors?.email && validate(errors.email, '')}
           rules={{ [ValidationTypes.REQUIRED]: true }}

@@ -35,7 +35,7 @@ InputSuffixIconStory.args = {
   suffixIcon: <Icon
     type={IconTypes.HELP_CIRCLE}
     size={IconSizes.MEDIUM}
-    color={IconColors.GRAY_500}
+    color={IconColors.GREY}
   />,
 };
 
@@ -50,7 +50,7 @@ InputPrefixIconStory.args = {
   disabled: false,
   placeholder: 'olivia@untitledui.com',
   hintText: 'This is a hint text to help user.',
-  prefixIcon: <Icon type={IconTypes.MAIL} size={IconSizes.MEDIUM} color={IconColors.GRAY_500} />,
+  prefixIcon: <Icon type={IconTypes.MAIL} size={IconSizes.MEDIUM} color={IconColors.GREY} />,
 };
 
 InputPrefixIconStory.story = {
