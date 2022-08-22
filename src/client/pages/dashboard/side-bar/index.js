@@ -5,8 +5,8 @@ import { useNavigate } from 'react-router-dom';
 import {
   NavigationList, NavigationFooterOptions,
 } from '../../../utils/helpers/dashboard-helper';
-import { NavItem } from '../nav-item';
-import { Button, ButtonSizes, ButtonVariants } from '../../button';
+import { NavItem } from '../../../components/navigation/nav-item';
+import { Button, ButtonSizes, ButtonVariants } from '../../../components/button';
 import URL from '../../../utils/constants/URL';
 
 import './index.scss';

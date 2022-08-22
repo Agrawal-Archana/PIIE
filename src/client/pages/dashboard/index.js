@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import Sidebar from '../../components/navigation/side-bar';
+import Sidebar from './side-bar';
 import { NavigationList } from '../../utils/helpers/dashboard-helper';
 
 import './index.scss';

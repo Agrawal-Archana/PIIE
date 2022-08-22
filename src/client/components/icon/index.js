@@ -40,6 +40,4 @@ Icon.defaultProps = {
   onClick: () => {},
 };
 
-Icon.displayName = 'Icon';
-
 export default Icon;

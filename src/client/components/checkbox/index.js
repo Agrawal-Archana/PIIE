@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import clsx from 'clsx';
 
 import useTranslation from '../../utils/helpers/translation-utils';
+import { ValidationTypes } from '../../utils/helpers/input-validations-utils';
 
 import './index.scss';
-import { ValidationTypes } from '../../utils/helpers/input-validations-utils';
 
 function Checkbox({
   id, label, name, className, disabled, register, rules, checked, onClick,
