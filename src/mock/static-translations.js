@@ -11,7 +11,6 @@ export default {
   __FORGOT_PASSWORD: 'Forgot password',
   __FORGOT_PASSWORD_HEADER: 'Forgot password?',
   __SIGN_IN: 'Sign in',
-  __SIGN_IN_WITH_GOOGLE: 'Sign in with Google',
   __DONT_HAVE_AN_ACCOUNT: 'Don\'t have an account?',
   __SIGN_UP: 'Sign up',
   __DASHBOARD: 'dashboard',

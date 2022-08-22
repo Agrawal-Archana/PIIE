@@ -18,14 +18,21 @@ function NavItem({
   id, label, onClick, expandable, icon, isExpanded, theme,
 }) {
   const onKeyDown = (event) => {
-    if (event.key === 13) {
+    if (event.key === 'Enter') {
       onClick(id);
     }
   };
 
+  const classNames = clsx('nav-item', {
+    [NavItemTheme.PRIMARY_LIGHT]: theme === NavItemTheme.PRIMARY_LIGHT,
+    [NavItemTheme.PRIMARY_DARK]: theme === NavItemTheme.PRIMARY_DARK,
+    [NavItemTheme.GRAY_DARK]: theme === NavItemTheme.GRAY_DARK,
+    [NavItemTheme.GRAY_LIGHT]: theme === NavItemTheme.GRAY_LIGHT,
+  });
+
   return (
     <div
-      className={clsx('nav-item', { theme })}
+      className={classNames}
       role="button"
       tabIndex={0}
       onKeyDown={onKeyDown}

@@ -87,15 +87,6 @@ function Login() {
             onClick={handleSubmit(onSubmitClick)}
           />
         </div>
-        <div className="sign-in-with-google">
-          <Button
-            id="sign-in-with-google"
-            label="__SIGN_IN_WITH_GOOGLE"
-            variant={ButtonVariants.SECONDARY_GRAY}
-            size={ButtonSizes.LARGE}
-            className="full-width"
-          />
-        </div>
         <div className="footer">
           <div className="footer-msg">
             {getTranslations('__DONT_HAVE_AN_ACCOUNT')}

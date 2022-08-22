@@ -52,9 +52,13 @@ function ForgotPassword() {
           onClick={handleSubmit(onSubmitClick)}
         />
         <div className="footer">
-          <div className="footer-msg">
-            {getTranslations('__BACK_TO_LOGIN')}
-          </div>
+          <Button
+            id="back-to-login"
+            label="__BACK_TO_LOGIN"
+            variant={ButtonVariants.LINK}
+            size={ButtonSizes.SMALL}
+            onClick={() => navigate(URL.LOGIN)}
+          />
         </div>
       </div>
     </form>
