@@ -1,88 +1,80 @@
-$color-white: var(--white);
-$color-dark: var(--gray-700);
-$color-grey: var(--gray-500);
-$color-light-grey: var(--gray-300);
-$color-primary: var(--primary-600);
-$color-disabled: var(--gray-200);
-$color-warning: var(--warning-600);
-$color-success: var(--success-600);
-$color-error: var(--error-600);
+@import '../../styleguide/color-palette.scss';
 
 .icon-container {
   height: 20px;
   width: 20px;
 
   &.color-white {
-    color: $color-white;
+    color: $white;
   }
 
   &.color-dark {
-    color: $color-dark;
+    color: $gray-700;
   }
 
   &.color-grey {
-    color: $color-grey;
+    color: $gray-500;
   }
 
   &.color-light-grey {
-    color: $color-light-grey;
+    color: $gray-300;
   }
 
   &.color-primary {
-    color: $color-primary;
+    color: $primary-600;
   }
 
   &.color-disabled {
-    color: $color-disabled;
+    color: $gray-200;
   }
 
   &.color-success {
-    color: $color-success;
+    color: $success-600;
   }
 
   &.color-warning {
-    color: $color-warning;
+    color: $warning-600;
   }
 
   &.color-error {
-    color: $color-error;
+    color: $error-600;
   }
 
   &[data-type="fill"] {
     &.color-white {
-      fill: $color-white;
+      fill: $white;
     }
 
     &.color-dark {
-      fill: $color-dark;
+      fill: $gray-700;
     }
 
     &.color-grey {
-      fill: $color-grey;
+      fill: $gray-500;
     }
 
     &.color-light-grey {
-      fill: $color-light-grey;
+      fill: $gray-300;
     }
 
     &.color-primary {
-      fill: $color-primary;
+      fill: $primary-600;
     }
 
     &.color-disabled {
-      fill: $color-disabled;
+      fill: $gray-200;
     }
 
     &.color-success {
-      fill: $color-success;
+      fill: $success-600;
     }
 
     &.color-warning {
-      fill: $color-warning;
+      fill: $warning-600;
     }
 
     &.color-error {
-      fill: $color-error;
+      fill: $error-600;
     }
   }
 

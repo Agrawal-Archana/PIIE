@@ -18,12 +18,21 @@
     font-size: $font-size-3;
     line-height: 24px;
     color: $gray-700;
+    flex: 1;
   }
 
   &.primary-light {
-    &:hover {
-      background: #F9F5FF;
+    &:hover, &.selected {
+      background: $primary-50;
       color: $primary-700;
+
+      .nav-item-icon {
+        .icon-container {
+          &.color-grey {
+            color: $primary-700;
+          }
+        }
+      }
 
       .nav-item-label {
         color: $primary-700;

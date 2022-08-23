@@ -3,7 +3,7 @@ import clsx from 'clsx';
 import PropTypes from 'prop-types';
 
 import Icon from '../../icon';
-import { IconSizes, IconColors } from '../../icon/icons-constants';
+import { IconSizes, IconColors, IconTypes } from '../../icon/icons-constants';
 
 import './index.scss';
 
@@ -15,11 +15,21 @@ const NavItemTheme = {
 };
 
 function NavItem({
-  id, label, onClick, expandable, icon, isExpanded, theme,
+  id, label, onClick, nodes, icon, isSelected, theme, isExpanded, onToggleExpand,
 }) {
+  const expandable = Boolean(nodes.length);
+
+  const onItemClick = () => {
+    if (expandable) {
+      onToggleExpand((prevState) => ({ ...prevState, [id]: !prevState[id] }));
+    } else {
+      onClick(id);
+    }
+  };
+
   const onKeyDown = (event) => {
     if (event.key === 'Enter') {
-      onClick(id);
+      onItemClick();
     }
   };
 
@@ -28,6 +38,7 @@ function NavItem({
     [NavItemTheme.PRIMARY_DARK]: theme === NavItemTheme.PRIMARY_DARK,
     [NavItemTheme.GRAY_DARK]: theme === NavItemTheme.GRAY_DARK,
     [NavItemTheme.GRAY_LIGHT]: theme === NavItemTheme.GRAY_LIGHT,
+    selected: isSelected,
   });
 
   return (
@@ -36,7 +47,7 @@ function NavItem({
       role="button"
       tabIndex={0}
       onKeyDown={onKeyDown}
-      onClick={() => onClick(id)}
+      onClick={onItemClick}
     >
       {icon && (
       <div className="nav-item-icon">
@@ -49,7 +60,16 @@ function NavItem({
       )}
       <div className="nav-item-label">{label}</div>
       <div className="nav-item-summary" />
-      {expandable && <div className={clsx('nav-item-icon', { expanded: isExpanded })} />}
+      {expandable
+            && (
+            <div className={clsx('nav-item-icon')}>
+              <Icon
+                color={IconColors.GREY}
+                type={isExpanded ? IconTypes.CHEVRON_DOWN : IconTypes.CHEVRON_RIGHT}
+                size={IconSizes.LARGE}
+              />
+            </div>
+            )}
     </div>
   );
 }
@@ -58,20 +78,28 @@ NavItem.propTypes = {
   id: PropTypes.string,
   label: PropTypes.string,
   onClick: PropTypes.func,
-  expandable: PropTypes.bool,
+  onToggleExpand: PropTypes.func,
+  nodes: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.string,
+    label: PropTypes.string,
+    icon: PropTypes.string,
+  })),
   icon: PropTypes.string,
+  isSelected: PropTypes.bool,
+  theme: PropTypes.oneOf(Object.values(NavItemTheme)),
   isExpanded: PropTypes.bool,
-  theme: PropTypes.oneOf([Object.values(NavItemTheme)]),
 };
 
 NavItem.defaultProps = {
   id: '',
   label: '',
   onClick: () => {},
-  expandable: false,
+  onToggleExpand: () => {},
+  nodes: [],
   icon: '',
-  isExpanded: false,
+  isSelected: false,
   theme: NavItemTheme.PRIMARY_LIGHT,
+  isExpanded: false,
 };
 
 export {

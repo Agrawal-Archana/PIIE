@@ -29,6 +29,29 @@ export default [
     component: Dashboard,
     isProtected: false,
     index: false,
+    children: [
+      {
+        id: 'overview',
+        path: URL.OVERVIEW,
+        component: PageNotFound,
+        isProtected: false,
+        index: false,
+      },
+      {
+        id: 'notifications',
+        path: URL.NOTIFICATIONS,
+        component: PageNotFound,
+        isProtected: false,
+        index: false,
+      },
+      {
+        id: 'saved_reports',
+        path: URL.SAVED_REPORTS,
+        component: PageNotFound,
+        isProtected: false,
+        index: false,
+      },
+    ],
   },
   {
     id: 'signup',
