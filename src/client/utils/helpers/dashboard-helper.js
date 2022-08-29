@@ -8,7 +8,7 @@ const NavigationList = [
   },
   {
     id: 'dashboard',
-    label: 'dashboard',
+    label: 'Dashboard',
     icon: IconTypes.BAR_CHART,
     nodes: [
       {
@@ -17,7 +17,7 @@ const NavigationList = [
         icon: IconTypes.ACTIVITY,
       },
       {
-        id: 'notification',
+        id: 'notifications',
         label: 'Notification',
         icon: IconTypes.NOTIFICATIONS,
       },

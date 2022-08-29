@@ -31,6 +31,13 @@ export default [
     index: false,
     children: [
       {
+        id: 'home',
+        path: URL.DASHBOARD_HOME,
+        component: PageNotFound,
+        isProtected: false,
+        index: false,
+      },
+      {
         id: 'overview',
         path: URL.OVERVIEW,
         component: PageNotFound,
@@ -45,8 +52,22 @@ export default [
         index: false,
       },
       {
-        id: 'saved_reports',
+        id: 'saved-reports',
         path: URL.SAVED_REPORTS,
+        component: PageNotFound,
+        isProtected: false,
+        index: false,
+      },
+      {
+        id: 'projects',
+        path: URL.PROJECTS,
+        component: PageNotFound,
+        isProtected: false,
+        index: false,
+      },
+      {
+        id: 'users',
+        path: URL.USERS,
         component: PageNotFound,
         isProtected: false,
         index: false,

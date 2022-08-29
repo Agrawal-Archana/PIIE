@@ -1,10 +1,11 @@
 import React, { Suspense } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import './App.css';
 import TranslationContext from './contexts/translation-context';
 import StaticTranslations from '../mock/static-translations';
 import AppRoutes from './AppRoutes';
+
+import './App.css';
 
 function App() {
   const createRoute = ({

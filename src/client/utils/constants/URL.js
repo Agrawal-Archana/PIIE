@@ -5,9 +5,10 @@ export default {
   FORGOT_PASSWORD: '/forgot-password',
   RESET_PASSWORD: '/reset-password',
   DASHBOARD: '/dashboard',
+  DASHBOARD_HOME: 'home',
   OVERVIEW: 'overview',
   NOTIFICATIONS: 'notifications',
-  SAVED_REPORTS: 'saved_reports',
-  TRANSACTIONS: '/transactions',
-  PAYMENTS: '/payments',
+  SAVED_REPORTS: 'saved-reports',
+  PROJECTS: 'projects',
+  USERS: 'users',
 };
